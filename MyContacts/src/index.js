@@ -2,8 +2,10 @@ const express = require('express');
 
 const app = express();
 
-app.get('/', (request,response) => {
-    response.end('Hello World!');
+app.get('/', (request, response) => {
+    response.end('Eu vou virar um monstro no desenvolvimento. Anota ai.');
 });
 
-app.listen(3000,() => 'Server started at http://locaslhost:3000');
+app.listen(3000, () => {
+    console.log('Server started at http://localhost:3000');
+});
