@@ -3,6 +3,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+    mode: 'production',
     entry: path.resolve(__dirname, 'src', 'index.js'),
     output: {
         path: path.resolve(__dirname, 'build'),
@@ -16,7 +17,7 @@ module.exports = {
     ],
     module: {
         rules:[
-            {test: /\.js$/, exclude: /node_modules/, use:'babel-loader'},
+            {test: /\.jsx?$/, exclude: /node_modules/, use:'babel-loader'},
             {},
             {},
             {},
